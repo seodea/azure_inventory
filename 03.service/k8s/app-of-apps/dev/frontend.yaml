@@ -1,0 +1,68 @@
+---
+# Frontend Deployment
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: inventory-frontend
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: inventory-frontend
+  template:
+    metadata:
+      labels:
+        app: inventory-frontend
+    spec:
+      containers:
+      - name: frontend
+        image: wotnek90/inventory:frontend-v3
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
+        env:
+        - name: API_URL
+          valueFrom:
+            configMapKeyRef:
+              name: inventory-config
+              key: API_URL
+        - name: BACKEND_HOST
+          valueFrom:
+            configMapKeyRef:
+              name: inventory-config
+              key: BACKEND_HOST
+        resources:
+          requests:
+            memory: "32Mi"
+            cpu: "25m"
+          limits:
+            memory: "128Mi"
+            cpu: "100m"
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 80
+          initialDelaySeconds: 10
+          periodSeconds: 30
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 80
+          initialDelaySeconds: 5
+          periodSeconds: 10
+
+---
+# Frontend Service
+apiVersion: v1
+kind: Service
+metadata:
+  name: inventory-frontend
+  namespace: default
+spec:
+  selector:
+    app: inventory-frontend
+  ports:
+  - port: 80
+    targetPort: 80
+  type: ClusterIP
