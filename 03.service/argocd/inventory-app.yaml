@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: inventory-app-test
+spec:
+  destination:
+    namespace: default
+    server: https://sdh-dev-aks-dns-9p563iba.hcp.koreacentral.azmk8s.io:443
+  source:
+    path: 03.service/k8s
+    repoURL: https://github.com/seodea/azure_inventory.git
+    targetRevision: main
+  project: inventory
+  syncPolicy:
+    automated: null
+    syncOptions:
+      - CreateNamespace=true
