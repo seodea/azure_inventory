@@ -1,0 +1,55 @@
+INFO:     Will watch for changes in these directories: ['/home/sdh/inventory/backend']
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [9523] using WatchFiles
+INFO:     Started server process [9541]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'ai_foundry.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [9541]
+INFO:     Started server process [9625]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+[DEBUG] 전체 workspace: 1개
+[DEBUG] Hub: 0개, Project: 0개
+[DEBUG] 기타 workspace: 1개 - ['aml-kisaipbdata-dev (kind=)']
+INFO:     127.0.0.1:35618 - "POST /ai-foundry/summary HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'ai_foundry.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [9625]
+INFO:     Started server process [9748]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'ai_foundry.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [9748]
+INFO:     Started server process [9831]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'ai_foundry.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [9831]
+INFO:     Started server process [9922]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'ai_foundry.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [9922]
+INFO:     Started server process [9982]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [9982]
+INFO:     Stopping reloader process [9523]
