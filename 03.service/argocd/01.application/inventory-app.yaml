@@ -7,7 +7,7 @@ spec:
     namespace: default
     server: https://sdh-dev-aks-dns-9p563iba.hcp.koreacentral.azmk8s.io:443
   source:
-    path: 03.service/k8s
+    path: 03.service/k8s/app
     repoURL: https://github.com/seodea/azure_inventory.git
     targetRevision: main
   project: inventory
